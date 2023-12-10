@@ -1,0 +1,31 @@
+url: ~
+template:
+  bootstrap: 5
+  bootswatch: lux
+  bslib:
+    pkgdown-nav-height: 100px
+home:
+  links:
+  - text: Github Respiratory
+    href: https://github.com/pwu97/bettingtools
+  - text: RGC
+    href: https://www.responsiblegambling.org/
+footer:
+  structure:
+    left: legal
+  components:
+    legal: This sports betting statistics package is intended for informational and entertainment purposes only. The data and information provided are based on historical performance and statistical analysis, and while we strive for accuracy, we cannot guarantee the completeness, timeliness, or accuracy of the content. Gambling involves risk, and past performance does not guarantee future results. Users are advised to independently verify and assess all information provided in this package before making any betting or investment decisions. The use of this statistics package does not constitute financial advice, and users should exercise their own judgment and discretion when engaging in sports betting activities. It is crucial to be aware of and comply with the legal regulations regarding sports betting in your jurisdiction. Users are responsible for ensuring that their use of this statistics package complies with all applicable laws and regulations. We do not endorse or promote any form of illegal or underage gambling. If you have a gambling problem or suspect that you may have one, we encourage you to seek help from appropriate resources. By using this sports betting statistics package, you acknowledge and agree to the terms of this disclaimer. The developers and providers of this package shall not be liable for any direct, indirect, incidental, consequential, or special damages arising out of the use or inability to use the information provided. Please gamble responsibly and within your means.
+
+navbar:
+  structure:
+    right: [github]
+  components:
+    github:
+      icon: fa-github
+      href: https://github.com/pwu97?tab=repositories
+      aria-label: GitHub
+
+
+
+
+
