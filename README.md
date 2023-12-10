@@ -14,7 +14,7 @@ These functions take inspiration from posts by user "Ganchrow" on the Sportsbook
 
 Link to [original GitHub respiratory](https://github.com/pwu97/bettingtools)
 
-Link to deployed website
+Link to [deployed website](https://jhu-statprogramming-fall-2023.github.io/biostat777-project3-part1-DanielRuan07/)
 
 Customizations:
 
