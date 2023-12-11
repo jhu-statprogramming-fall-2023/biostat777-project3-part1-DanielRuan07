@@ -291,7 +291,7 @@ scored</td>
 <span>       x <span class="op">=</span> <span class="st">"Team Name"</span>,</span>
 <span>       title <span class="op">=</span> <span class="st">"Average moneyline for each team during\nthe 2019 MLB Season"</span>,</span>
 <span>       subtitle <span class="op">=</span> <span class="st">"Houston Astros has the lowest ML on average"</span>,</span>
-<span>       caption <span class="op">=</span> <span class="st">"Data Source: Sports-Statistics.com"</span><span class="op">)</span></span></code></pre></div>
+<span>       caption <span class="op">=</span> <span class="st">"Data Source: Sports-Statistics.com "</span><span class="op">)</span></span></code></pre></div>
 <p><img src="vignette_files/figure-html/unnamed-chunk-4-1.png" width="700"></p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">nba_odds_2020</span> <span class="op">&lt;-</span> <span class="va">nba_odds_2020</span> <span class="op">%&gt;%</span></span>
@@ -314,11 +314,10 @@ scored</td>
 <span>       subtitle <span class="op">=</span> <span class="st">"NBA 2020 Season"</span>,</span>
 <span>       x <span class="op">=</span> <span class="st">"Home Moneyline"</span>,</span>
 <span>       y <span class="op">=</span> <span class="st">"Away Moneyline"</span>,</span>
-<span>       caption <span class="op">=</span> <span class="st">"Data Source: Sports-Statistics.com"</span><span class="op">)</span></span></code></pre></div>
+<span>       caption <span class="op">=</span> <span class="st">"Data Source: Sports-Statistics.com "</span><span class="op">)</span></span></code></pre></div>
 <p><img src="vignette_files/figure-html/unnamed-chunk-5-1.png" width="700"></p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># Use pmap to apply a function row-wise to create a new variable</span></span>
-<span><span class="va">nba_odds_2020</span> <span class="op">&lt;-</span> <span class="va">nba_odds_2020</span> <span class="op">%&gt;%</span></span>
+<code class="sourceCode R"><span><span class="va">nba_odds_2020</span> <span class="op">&lt;-</span> <span class="va">nba_odds_2020</span> <span class="op">%&gt;%</span></span>
 <span>  <span class="fu">mutate</span><span class="op">(</span>higher_ml_winner <span class="op">=</span> <span class="fu">pmap_chr</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="va">home_ml</span>, <span class="va">away_ml</span>, <span class="va">game_result</span><span class="op">)</span>,</span>
 <span>                                     <span class="kw">function</span><span class="op">(</span><span class="va">home_ml</span>, <span class="va">away_ml</span>, <span class="va">game_result</span><span class="op">)</span> <span class="op">{</span></span>
 <span>                                       <span class="kw">if</span> <span class="op">(</span><span class="op">(</span><span class="va">game_result</span> <span class="op">==</span> <span class="st">"Home Win"</span> <span class="op">&amp;&amp;</span> <span class="va">home_ml</span> <span class="op">&gt;</span> <span class="va">away_ml</span><span class="op">)</span> <span class="op">||</span></span>
@@ -335,7 +334,7 @@ scored</td>
 <span>       subtitle <span class="op">=</span> <span class="st">"NBA 2020 Season"</span>,</span>
 <span>       x <span class="op">=</span> <span class="st">"Higher Moneyline Winner"</span>,</span>
 <span>       y <span class="op">=</span> <span class="st">"Count"</span>,</span>
-<span>       caption <span class="op">=</span> <span class="st">"Data Source: Sports-Statistics.com"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>       caption <span class="op">=</span> <span class="st">"Data Source: Sports-Statistics.com "</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">scale_fill_manual</span><span class="op">(</span>values <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Home Win"</span> <span class="op">=</span> <span class="st">"skyblue"</span>, <span class="st">"Away Win"</span> <span class="op">=</span> <span class="st">"coral"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p><img src="vignette_files/figure-html/unnamed-chunk-6-1.png" width="700"></p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
@@ -347,7 +346,7 @@ scored</td>
 <span>       subtitle <span class="op">=</span> <span class="st">"NBA 2020 Season"</span>,</span>
 <span>       x <span class="op">=</span> <span class="st">"Game Number"</span>,</span>
 <span>       y <span class="op">=</span> <span class="st">"Moneyline Odds"</span>,</span>
-<span>       caption <span class="op">=</span> <span class="st">"Data Source: Sports-Statistics.com"</span><span class="op">)</span></span></code></pre></div>
+<span>       caption <span class="op">=</span> <span class="st">"Data Source: Sports-Statistics.com "</span><span class="op">)</span></span></code></pre></div>
 <p><img src="vignette_files/figure-html/unnamed-chunk-7-1.png" width="700"></p>
 </div>
 </div>

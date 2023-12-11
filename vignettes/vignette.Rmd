@@ -117,7 +117,7 @@ avg_2019_mlb_ml %>%
        x = "Team Name",
        title = "Average moneyline for each team during\nthe 2019 MLB Season",
        subtitle = "Houston Astros has the lowest ML on average",
-       caption = "Data Source: Sports-Statistics.com")
+       caption = "Data Source: Sports-Statistics.com ")
 
 ```
 
@@ -142,12 +142,11 @@ ggplot(nba_odds_2020, aes(x = home_ml, y = away_ml, color = game_result)) +
        subtitle = "NBA 2020 Season",
        x = "Home Moneyline",
        y = "Away Moneyline",
-       caption = "Data Source: Sports-Statistics.com")
+       caption = "Data Source: Sports-Statistics.com ")
 
 ```
 
 ```{r}
-# Use pmap to apply a function row-wise to create a new variable
 nba_odds_2020 <- nba_odds_2020 %>%
   mutate(higher_ml_winner = pmap_chr(list(home_ml, away_ml, game_result),
                                      function(home_ml, away_ml, game_result) {
@@ -165,7 +164,7 @@ ggplot(nba_odds_2020, aes(x = higher_ml_winner, fill = game_result)) +
        subtitle = "NBA 2020 Season",
        x = "Higher Moneyline Winner",
        y = "Count",
-       caption = "Data Source: Sports-Statistics.com") +
+       caption = "Data Source: Sports-Statistics.com ") +
   scale_fill_manual(values = c("Home Win" = "skyblue", "Away Win" = "coral"))
 
 
@@ -180,7 +179,7 @@ ggplot(nba_odds_2020, aes(x = game_number, y = away_ml, group = 1)) +
        subtitle = "NBA 2020 Season",
        x = "Game Number",
        y = "Moneyline Odds",
-       caption = "Data Source: Sports-Statistics.com")
+       caption = "Data Source: Sports-Statistics.com ")
 
 ```
 
