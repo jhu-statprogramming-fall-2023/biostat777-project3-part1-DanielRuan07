@@ -142,7 +142,7 @@ ggplot(nba_odds_2020, aes(x = home_ml, y = away_ml, color = game_result)) +
        subtitle = "NBA 2020 Season",
        x = "Home Moneyline",
        y = "Away Moneyline",
-       caption = "Data Source: Your NBA Dataset")
+       caption = "Data Source: Sports-Statistics.com")
 
 ```
 
@@ -165,7 +165,7 @@ ggplot(nba_odds_2020, aes(x = higher_ml_winner, fill = game_result)) +
        subtitle = "NBA 2020 Season",
        x = "Higher Moneyline Winner",
        y = "Count",
-       caption = "Data Source: Your NBA Dataset") +
+       caption = "Data Source: Sports-Statistics.com") +
   scale_fill_manual(values = c("Home Win" = "skyblue", "Away Win" = "coral"))
 
 
@@ -177,8 +177,10 @@ ggplot(nba_odds_2020, aes(x = game_number, y = away_ml, group = 1)) +
   geom_line(color = "blue", linetype = "dashed", aes(y = home_ml)) +
   facet_wrap(~game_result) +
   labs(title = "Moneyline Odds Across Games",
+       subtitle = "NBA 2020 Season",
        x = "Game Number",
-       y = "Moneyline Odds")
+       y = "Moneyline Odds",
+       caption = "Data Source: Sports-Statistics.com")
 
 ```
 
